@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeController.swift
 //  TrainingProject
 //
 //  Created by CuongVX-D1 on 7/25/19.
@@ -8,13 +8,20 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class HomeController: UIViewController {
 
     private let newsRepository = NewsRepositoryImpl(api: APIService.share)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchData()
+        setupTabbarItem()
+    }
+    
+    private func setupTabbarItem() {
+        self.title = "HOME"
+        self.tabBarItem.image = UIImage(named: "Home")
+        self.tabBarItem.selectedImage = UIImage(named: "HomeSlected")?.withRenderingMode(.alwaysOriginal)
     }
     
     private func fetchData() {
