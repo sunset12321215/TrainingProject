@@ -16,7 +16,10 @@ final class HomeController: UIViewController {
     private struct Constant {
         static let pageMenuArray = ["News", "Popular"]
     }
-    private let newsRepository = NewsRepositoryImpl(api: APIService.share)
+    private let newsRepository = HomeRepositoryImpl(api: APIService.share)
+    private let popularRepository = HomeRepositoryImpl(api: APIService.share)
+    private var news: [News] = [News]()
+    private var populars: [Popular] = [Popular]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,8 +53,20 @@ final class HomeController: UIViewController {
             guard self != nil else { return }
             switch result {
             case .success(let newsResponse):
-                guard let results = newsResponse?.news else { return }
-                print(results)
+                guard let newsResults = newsResponse?.news else { return }
+                self?.news = newsResults
+            case .failure(let error):
+                print(error as Any)
+            }
+        }
+        
+        popularRepository.getPopular { [weak self] result in
+            guard self != nil else { return }
+            switch result {
+            case .success(let popularResponse):
+                guard let popularResults = popularResponse?.populars else { return }
+                self?.populars = popularResults
+                self?.pageItemCollectionView.reloadData()
             case .failure(let error):
                 print(error as Any)
             }
@@ -83,6 +98,8 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
             let cell: PageItemCell = collectionView.dequeueReusableCell(for: indexPath)
             let item = indexPath.row % 2 == 0 ? 0 : 1
             cell.sectionOfCollection = item
+            cell.news = news
+            cell.populars = populars
             return cell
         }
     }
