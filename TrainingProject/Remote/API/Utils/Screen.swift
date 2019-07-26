@@ -12,9 +12,8 @@ struct Screen {
     private static let bounds = UIScreen.main.bounds
     static let width = bounds.size.width
     static let height = bounds.size.height
-    static let designWidth: CGFloat = 375
-    static let designHeight: CGFloat = 812
+    static let designWidth: CGFloat = 363
+    static let designHeight: CGFloat = 645
     static let ratioWidth = width / designWidth
     static let ratioHeight = height / designHeight
-    static let statusBarHeight = UIApplication.shared.statusBarFrame.height
 }
