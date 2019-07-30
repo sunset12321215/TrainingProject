@@ -16,8 +16,9 @@ final class PageMenuCell: UICollectionViewCell, NibReusable {
         super.awakeFromNib()
     }
 
-    func setContentForCell(data: String) {
-        pageMenuItemLabel.text = data
+    func setContentForCell(data: (name: String, isChecked: Bool)) {
+        pageMenuItemLabel.text = data.name
+        pageMenuItemLabel.textColor = data.isChecked ? #colorLiteral(red: 0.4864677787, green: 0.3571970463, blue: 0.7660528421, alpha: 1) : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
     
     class func sizeForCell(data: String, height: CGFloat) -> CGSize {

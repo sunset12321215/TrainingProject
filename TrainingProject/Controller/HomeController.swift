@@ -14,7 +14,8 @@ final class HomeController: UIViewController {
     @IBOutlet private weak var pageItemCollectionView: UICollectionView!
     
     private struct Constant {
-        static let pageMenuArray = ["News", "Popular"]
+        static var pageMenuArray = [(name: "News", isChecked: true),
+                                    (name: "Popular", isChecked: false)]
     }
     private let newsRepository = HomeRepositoryImpl(api: APIService.share)
     private let popularRepository = HomeRepositoryImpl(api: APIService.share)
@@ -96,7 +97,7 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == pageMenuCollectionView {
             let cell: PageMenuCell = collectionView.dequeueReusableCell(for: indexPath)
-            cell.pageMenuItemLabel.text = Constant.pageMenuArray[indexPath.row]
+            cell.setContentForCell(data: Constant.pageMenuArray[indexPath.row])
             return cell
         } else {
             let cell: PageItemCell = collectionView.dequeueReusableCell(for: indexPath)
@@ -108,6 +109,17 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
             return cell
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        pageItemCollectionView.scrollToItem(at: IndexPath(item: indexPath.row, section: 0),
+                                            at: .right, animated: true)
+        for index in 0..<Constant.pageMenuArray.count {
+            Constant.pageMenuArray[index].isChecked = false
+        }
+        Constant.pageMenuArray[indexPath.row].isChecked = true
+        pageMenuCollectionView.reloadData()
+    }
 }
 
 extension HomeController: UICollectionViewDelegateFlowLayout {
@@ -116,7 +128,7 @@ extension HomeController: UICollectionViewDelegateFlowLayout {
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {
         case pageMenuCollectionView:
-            return PageMenuCell.sizeForCell(data: Constant.pageMenuArray[indexPath.row],
+            return PageMenuCell.sizeForCell(data: Constant.pageMenuArray[indexPath.row].name,
                                             height: pageMenuCollectionView.frame.height)
         case pageItemCollectionView:
             return CGSize(width: pageItemCollectionView.frame.width,
@@ -128,8 +140,9 @@ extension HomeController: UICollectionViewDelegateFlowLayout {
 }
 
 extension HomeController: DetailEventDelegate {
-    func gotoDetailEventViewController() {
-        guard let detailEventViewController = storyboard?.instantiateViewController(withIdentifier: "detailEventVC") else {return}
+    func gotoDetailEventViewController(data: Popular) {
+        guard let detailEventViewController = storyboard?.instantiateViewController(withIdentifier: "detailEventVC") as? DetailEventViewController else {return}
+        detailEventViewController.popular = data
         present(detailEventViewController, animated: true, completion: nil)
     }
 }
