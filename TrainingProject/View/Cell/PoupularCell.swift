@@ -14,6 +14,15 @@ final class PoupularCell: UITableViewCell, NibReusable {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupView()
+    }
+    
+    private func setupView() {
+        selectionStyle = .none
+    }
     
     func setContentForCell(data: Popular) {
         popularImageView.sd_setImage(with: URL(string: data.photo),

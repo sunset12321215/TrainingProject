@@ -15,6 +15,15 @@ final class NewsCell: UITableViewCell, NibReusable {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupView()
+    }
+    
+    private func setupView() {
+        selectionStyle = .none
+    }
+    
     func setContentForCell(data: News) {
         newsImageView.sd_setImage(with: URL(string: data.thumb_img),
                                   placeholderImage: UIImage(named: "picture_not_available"))

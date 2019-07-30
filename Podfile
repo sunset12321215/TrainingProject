@@ -12,5 +12,6 @@ pod 'Reusable'
 pod 'Alamofire'
 pod 'ObjectMapper'
 pod 'SDWebImage'
+pod 'SkeletonView'
 
 end

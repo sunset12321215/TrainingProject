@@ -39,6 +39,7 @@
 		29C4925522EAA26100E0544B /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29C4925322EAA26100E0544B /* NewsCell.xib */; };
 		29C4925822EAA8A600E0544B /* PoupularCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C4925622EAA8A600E0544B /* PoupularCell.swift */; };
 		29C4925922EAA8A600E0544B /* PoupularCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29C4925722EAA8A600E0544B /* PoupularCell.xib */; };
+		29D04D4E22EFDDE400F2C168 /* DetailEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D04D4D22EFDDE400F2C168 /* DetailEventViewController.swift */; };
 		92E3741812012F7A44FA5F8B /* Pods_TrainingProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C540D9BAEFBDBEA7886F17A /* Pods_TrainingProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		29C4925322EAA26100E0544B /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		29C4925622EAA8A600E0544B /* PoupularCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoupularCell.swift; sourceTree = "<group>"; };
 		29C4925722EAA8A600E0544B /* PoupularCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PoupularCell.xib; sourceTree = "<group>"; };
+		29D04D4D22EFDDE400F2C168 /* DetailEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventViewController.swift; sourceTree = "<group>"; };
 		426E8C616BBE58C51F4D690B /* Pods-TrainingProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingProject.release.xcconfig"; path = "Target Support Files/Pods-TrainingProject/Pods-TrainingProject.release.xcconfig"; sourceTree = "<group>"; };
 		4C540D9BAEFBDBEA7886F17A /* Pods_TrainingProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainingProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D213985E5755257A712255 /* Pods-TrainingProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingProject.debug.xcconfig"; path = "Target Support Files/Pods-TrainingProject/Pods-TrainingProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				299B9DC822E99A0E0078F2E8 /* HomeController.swift */,
 				299B9E1522E9BBED0078F2E8 /* NearMeViewController.swift */,
 				299B9E1722E9BBF80078F2E8 /* BrowseViewController.swift */,
+				29D04D4D22EFDDE400F2C168 /* DetailEventViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				299B9E1222E9A55A0078F2E8 /* HomeRepository.swift in Sources */,
 				29AF127F22EB0228003A7B9F /* Popular.swift in Sources */,
 				299B9DC722E99A0E0078F2E8 /* AppDelegate.swift in Sources */,
+				29D04D4E22EFDDE400F2C168 /* DetailEventViewController.swift in Sources */,
 				29AF127D22EB018C003A7B9F /* PopularResponse.swift in Sources */,
 				299B9DF522E9A2C20078F2E8 /* CustomRequestAdapter.swift in Sources */,
 				299B9DFF22E9A2C20078F2E8 /* URLs.swift in Sources */,
