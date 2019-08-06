@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> Task [7.2] Fetch Data Category Screen
 
 # Xcode
 #
@@ -71,3 +76,12 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+<<<<<<< HEAD
+=======
+=======
+Pods
+>>>>>>> Task[7.1] Create UI Category
+=======
+Pods
+>>>>>>> Task [7.2] Fetch Data Category Screen
+>>>>>>> Task [7.2] Fetch Data Category Screen
