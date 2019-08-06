@@ -28,6 +28,11 @@ final class HomeController: UIViewController {
         setupCollectionViews()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     private func setupCollectionViews() {
         pageMenuCollectionView.do {
             $0.dataSource = self
@@ -43,9 +48,9 @@ final class HomeController: UIViewController {
     }
     
     private func setupTabbarItem() {
-        self.title = "HOME"
-        self.tabBarItem.image = UIImage(named: "Home")
-        self.tabBarItem.selectedImage = UIImage(named: "HomeSlected")?.withRenderingMode(.alwaysOriginal)
+        tabBarItem.title = "HOME"
+        tabBarItem.image = UIImage(named: "Home")
+        tabBarItem.selectedImage = UIImage(named: "HomeSlected")?.withRenderingMode(.alwaysOriginal)
     }
     
     private func fetchData() {
@@ -89,13 +94,13 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         if collectionView == pageMenuCollectionView {
             let cell: PageMenuCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.pageMenuItemLabel.text = Constant.pageMenuArray[indexPath.row]
             return cell
         } else {
             let cell: PageItemCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.delegate = self
             let item = indexPath.row % 2 == 0 ? 0 : 1
             cell.sectionOfCollection = item
             cell.news = news
@@ -119,5 +124,12 @@ extension HomeController: UICollectionViewDelegateFlowLayout {
         default:
             return CGSize.zero
         }
+    }
+}
+
+extension HomeController: DetailEventDelegate {
+    func gotoDetailEventViewController() {
+        guard let detailEventViewController = storyboard?.instantiateViewController(withIdentifier: "detailEventVC") else {return}
+        present(detailEventViewController, animated: true, completion: nil)
     }
 }

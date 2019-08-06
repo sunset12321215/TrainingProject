@@ -8,10 +8,15 @@
 
 import UIKit
 
+protocol DetailEventDelegate: class {
+    func gotoDetailEventViewController()
+}
+
 final class PageItemCell: UICollectionViewCell, NibReusable {
     
     @IBOutlet private weak var tableView: UITableView!
     
+    weak var delegate: DetailEventDelegate?
     var sectionOfCollection = 0
     var news: [News] = [News]() {
         didSet {
@@ -39,8 +44,6 @@ final class PageItemCell: UICollectionViewCell, NibReusable {
             $0.delegate = self
             $0.register(cellType: PoupularCell.self)
             $0.register(cellType: NewsCell.self)
-            $0.estimatedRowHeight = 200
-            $0.rowHeight = UITableView.automaticDimension
         }
     }
 }
@@ -71,6 +74,23 @@ extension PageItemCell: UITableViewDataSource, UITableViewDelegate {
             return cell
         default:
             return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch sectionOfCollection {
+        case 0:
+            return Constant.newsCellHeight
+        case 1:
+            return Constant.popularCellHeight
+        default:
+            return CGFloat.zero
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if sectionOfCollection == 1 {
+            delegate?.gotoDetailEventViewController()
         }
     }
 }
