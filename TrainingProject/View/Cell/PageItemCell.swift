@@ -9,7 +9,7 @@
 import UIKit
 
 protocol DetailEventDelegate: class {
-    func gotoDetailEventViewController()
+    func gotoDetailEventViewController(data: Popular)
 }
 
 final class PageItemCell: UICollectionViewCell, NibReusable {
@@ -77,7 +77,8 @@ extension PageItemCell: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView,
+                   heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch sectionOfCollection {
         case 0:
             return Constant.newsCellHeight
@@ -88,9 +89,10 @@ extension PageItemCell: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
         if sectionOfCollection == 1 {
-            delegate?.gotoDetailEventViewController()
+            delegate?.gotoDetailEventViewController(data: populars[indexPath.row])
         }
     }
 }
