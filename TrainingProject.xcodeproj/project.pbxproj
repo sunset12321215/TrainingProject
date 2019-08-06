@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2976D60322F1259900004973 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976D60122F1259900004973 /* CategoryCell.swift */; };
+		2976D60422F1259900004973 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2976D60222F1259900004973 /* CategoryCell.xib */; };
 		299B9DC722E99A0E0078F2E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B9DC622E99A0E0078F2E8 /* AppDelegate.swift */; };
 		299B9DC922E99A0E0078F2E8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B9DC822E99A0E0078F2E8 /* HomeController.swift */; };
 		299B9DCC22E99A0E0078F2E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 299B9DCA22E99A0E0078F2E8 /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2976D60122F1259900004973 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		2976D60222F1259900004973 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		299B9DC322E99A0E0078F2E8 /* TrainingProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		299B9DC622E99A0E0078F2E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		299B9DC822E99A0E0078F2E8 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -289,6 +293,8 @@
 				29C4925322EAA26100E0544B /* NewsCell.xib */,
 				29C4925622EAA8A600E0544B /* PoupularCell.swift */,
 				29C4925722EAA8A600E0544B /* PoupularCell.xib */,
+				2976D60122F1259900004973 /* CategoryCell.swift */,
+				2976D60222F1259900004973 /* CategoryCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -369,6 +375,7 @@
 				299B9DCE22E99A0E0078F2E8 /* Assets.xcassets in Resources */,
 				299B9DCC22E99A0E0078F2E8 /* Main.storyboard in Resources */,
 				29C4924D22EA8E6700E0544B /* PageMenuCell.xib in Resources */,
+				2976D60422F1259900004973 /* CategoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +451,7 @@
 				299B9E1622E9BBED0078F2E8 /* NearMeViewController.swift in Sources */,
 				299B9DFA22E9A2C20078F2E8 /* HTTPStatusCode.swift in Sources */,
 				299B9DF322E9A2C20078F2E8 /* ErrorResponse.swift in Sources */,
+				2976D60322F1259900004973 /* CategoryCell.swift in Sources */,
 				299B9DF722E9A2C20078F2E8 /* NewsRequest.swift in Sources */,
 				29C4925822EAA8A600E0544B /* PoupularCell.swift in Sources */,
 				29AF127B22EB0059003A7B9F /* PopularRequest.swift in Sources */,
