@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2976D60322F1259900004973 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976D60122F1259900004973 /* CategoryCell.swift */; };
+		2976D60422F1259900004973 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2976D60222F1259900004973 /* CategoryCell.xib */; };
 		299B9DC722E99A0E0078F2E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B9DC622E99A0E0078F2E8 /* AppDelegate.swift */; };
 		299B9DC922E99A0E0078F2E8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B9DC822E99A0E0078F2E8 /* HomeController.swift */; };
 		299B9DCC22E99A0E0078F2E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 299B9DCA22E99A0E0078F2E8 /* Main.storyboard */; };
@@ -40,10 +42,16 @@
 		29C4925822EAA8A600E0544B /* PoupularCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C4925622EAA8A600E0544B /* PoupularCell.swift */; };
 		29C4925922EAA8A600E0544B /* PoupularCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29C4925722EAA8A600E0544B /* PoupularCell.xib */; };
 		29D04D4E22EFDDE400F2C168 /* DetailEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D04D4D22EFDDE400F2C168 /* DetailEventViewController.swift */; };
+		29ED098F22F13B7800E0CC7E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ED098E22F13B7800E0CC7E /* Category.swift */; };
+		29ED099122F13BE400E0CC7E /* BrowseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ED099022F13BE400E0CC7E /* BrowseRepository.swift */; };
+		29ED099322F13D4D00E0CC7E /* CategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ED099222F13D4D00E0CC7E /* CategoryResponse.swift */; };
+		29ED099522F13DCA00E0CC7E /* CategoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ED099422F13DCA00E0CC7E /* CategoryRequest.swift */; };
 		92E3741812012F7A44FA5F8B /* Pods_TrainingProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C540D9BAEFBDBEA7886F17A /* Pods_TrainingProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2976D60122F1259900004973 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		2976D60222F1259900004973 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		299B9DC322E99A0E0078F2E8 /* TrainingProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		299B9DC622E99A0E0078F2E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		299B9DC822E99A0E0078F2E8 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -80,6 +88,10 @@
 		29C4925622EAA8A600E0544B /* PoupularCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoupularCell.swift; sourceTree = "<group>"; };
 		29C4925722EAA8A600E0544B /* PoupularCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PoupularCell.xib; sourceTree = "<group>"; };
 		29D04D4D22EFDDE400F2C168 /* DetailEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventViewController.swift; sourceTree = "<group>"; };
+		29ED098E22F13B7800E0CC7E /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		29ED099022F13BE400E0CC7E /* BrowseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseRepository.swift; sourceTree = "<group>"; };
+		29ED099222F13D4D00E0CC7E /* CategoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryResponse.swift; sourceTree = "<group>"; };
+		29ED099422F13DCA00E0CC7E /* CategoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRequest.swift; sourceTree = "<group>"; };
 		426E8C616BBE58C51F4D690B /* Pods-TrainingProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingProject.release.xcconfig"; path = "Target Support Files/Pods-TrainingProject/Pods-TrainingProject.release.xcconfig"; sourceTree = "<group>"; };
 		4C540D9BAEFBDBEA7886F17A /* Pods_TrainingProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainingProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D213985E5755257A712255 /* Pods-TrainingProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingProject.debug.xcconfig"; path = "Target Support Files/Pods-TrainingProject/Pods-TrainingProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +215,7 @@
 				299B9DE422E9A2C20078F2E8 /* BaseRequest.swift */,
 				299B9DE522E9A2C20078F2E8 /* NewsRequest.swift */,
 				29AF127A22EB0059003A7B9F /* PopularRequest.swift */,
+				29ED099422F13DCA00E0CC7E /* CategoryRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -213,6 +226,7 @@
 				299B9DE822E9A2C20078F2E8 /* NewsResponse.swift */,
 				299B9DE922E9A2C20078F2E8 /* HTTPStatusCode.swift */,
 				29AF127C22EB018C003A7B9F /* PopularResponse.swift */,
+				29ED099222F13D4D00E0CC7E /* CategoryResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -258,6 +272,7 @@
 			children = (
 				299B9E0622E9A55A0078F2E8 /* News.swift */,
 				29AF127E22EB0228003A7B9F /* Popular.swift */,
+				29ED098E22F13B7800E0CC7E /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -266,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				299B9E0B22E9A55A0078F2E8 /* HomeRepository.swift */,
+				29ED099022F13BE400E0CC7E /* BrowseRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -289,6 +305,8 @@
 				29C4925322EAA26100E0544B /* NewsCell.xib */,
 				29C4925622EAA8A600E0544B /* PoupularCell.swift */,
 				29C4925722EAA8A600E0544B /* PoupularCell.xib */,
+				2976D60122F1259900004973 /* CategoryCell.swift */,
+				2976D60222F1259900004973 /* CategoryCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -369,6 +387,7 @@
 				299B9DCE22E99A0E0078F2E8 /* Assets.xcassets in Resources */,
 				299B9DCC22E99A0E0078F2E8 /* Main.storyboard in Resources */,
 				29C4924D22EA8E6700E0544B /* PageMenuCell.xib in Resources */,
+				2976D60422F1259900004973 /* CategoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +452,10 @@
 				299B9DF622E9A2C20078F2E8 /* BaseRequest.swift in Sources */,
 				299B9E0E22E9A55A0078F2E8 /* News.swift in Sources */,
 				299B9E1222E9A55A0078F2E8 /* HomeRepository.swift in Sources */,
+				29ED099122F13BE400E0CC7E /* BrowseRepository.swift in Sources */,
 				29AF127F22EB0228003A7B9F /* Popular.swift in Sources */,
+				29ED099322F13D4D00E0CC7E /* CategoryResponse.swift in Sources */,
+				29ED099522F13DCA00E0CC7E /* CategoryRequest.swift in Sources */,
 				299B9DC722E99A0E0078F2E8 /* AppDelegate.swift in Sources */,
 				29D04D4E22EFDDE400F2C168 /* DetailEventViewController.swift in Sources */,
 				29AF127D22EB018C003A7B9F /* PopularResponse.swift in Sources */,
@@ -444,9 +466,11 @@
 				299B9E1622E9BBED0078F2E8 /* NearMeViewController.swift in Sources */,
 				299B9DFA22E9A2C20078F2E8 /* HTTPStatusCode.swift in Sources */,
 				299B9DF322E9A2C20078F2E8 /* ErrorResponse.swift in Sources */,
+				2976D60322F1259900004973 /* CategoryCell.swift in Sources */,
 				299B9DF722E9A2C20078F2E8 /* NewsRequest.swift in Sources */,
 				29C4925822EAA8A600E0544B /* PoupularCell.swift in Sources */,
 				29AF127B22EB0059003A7B9F /* PopularRequest.swift in Sources */,
+				29ED098F22F13B7800E0CC7E /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
