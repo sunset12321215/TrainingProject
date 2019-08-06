@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		299B9DC722E99A0E0078F2E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B9DC622E99A0E0078F2E8 /* AppDelegate.swift */; };
-		299B9DC922E99A0E0078F2E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B9DC822E99A0E0078F2E8 /* ViewController.swift */; };
+		299B9DC922E99A0E0078F2E8 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B9DC822E99A0E0078F2E8 /* HomeController.swift */; };
 		299B9DCC22E99A0E0078F2E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 299B9DCA22E99A0E0078F2E8 /* Main.storyboard */; };
 		299B9DCE22E99A0E0078F2E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 299B9DCD22E99A0E0078F2E8 /* Assets.xcassets */; };
 		299B9DD122E99A0E0078F2E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 299B9DCF22E99A0E0078F2E8 /* LaunchScreen.storyboard */; };
@@ -25,13 +25,15 @@
 		299B9DFF22E9A2C20078F2E8 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B9DF022E9A2C20078F2E8 /* URLs.swift */; };
 		299B9E0E22E9A55A0078F2E8 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B9E0622E9A55A0078F2E8 /* News.swift */; };
 		299B9E1222E9A55A0078F2E8 /* NewsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B9E0B22E9A55A0078F2E8 /* NewsRepository.swift */; };
+		299B9E1622E9BBED0078F2E8 /* NearMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B9E1522E9BBED0078F2E8 /* NearMeViewController.swift */; };
+		299B9E1822E9BBF80078F2E8 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299B9E1722E9BBF80078F2E8 /* BrowseViewController.swift */; };
 		92E3741812012F7A44FA5F8B /* Pods_TrainingProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C540D9BAEFBDBEA7886F17A /* Pods_TrainingProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		299B9DC322E99A0E0078F2E8 /* TrainingProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		299B9DC622E99A0E0078F2E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		299B9DC822E99A0E0078F2E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		299B9DC822E99A0E0078F2E8 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		299B9DCB22E99A0E0078F2E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		299B9DCD22E99A0E0078F2E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		299B9DD022E99A0E0078F2E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +52,8 @@
 		299B9DF022E9A2C20078F2E8 /* URLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 		299B9E0622E9A55A0078F2E8 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		299B9E0B22E9A55A0078F2E8 /* NewsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsRepository.swift; sourceTree = "<group>"; };
+		299B9E1522E9BBED0078F2E8 /* NearMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeViewController.swift; sourceTree = "<group>"; };
+		299B9E1722E9BBF80078F2E8 /* BrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
 		426E8C616BBE58C51F4D690B /* Pods-TrainingProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingProject.release.xcconfig"; path = "Target Support Files/Pods-TrainingProject/Pods-TrainingProject.release.xcconfig"; sourceTree = "<group>"; };
 		4C540D9BAEFBDBEA7886F17A /* Pods_TrainingProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainingProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D213985E5755257A712255 /* Pods-TrainingProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingProject.debug.xcconfig"; path = "Target Support Files/Pods-TrainingProject/Pods-TrainingProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,7 +131,9 @@
 		299B9DDA22E99AD90078F2E8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				299B9DC822E99A0E0078F2E8 /* ViewController.swift */,
+				299B9DC822E99A0E0078F2E8 /* HomeController.swift */,
+				299B9E1522E9BBED0078F2E8 /* NearMeViewController.swift */,
+				299B9E1722E9BBF80078F2E8 /* BrowseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -356,8 +362,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				299B9DC922E99A0E0078F2E8 /* ViewController.swift in Sources */,
+				299B9DC922E99A0E0078F2E8 /* HomeController.swift in Sources */,
 				299B9DF422E9A2C20078F2E8 /* BaseResult.swift in Sources */,
+				299B9E1822E9BBF80078F2E8 /* BrowseViewController.swift in Sources */,
 				299B9DF922E9A2C20078F2E8 /* NewsResponse.swift in Sources */,
 				299B9DF222E9A2C20078F2E8 /* BaseError.swift in Sources */,
 				299B9DFE22E9A2C20078F2E8 /* Screen.swift in Sources */,
@@ -368,6 +375,7 @@
 				299B9DF522E9A2C20078F2E8 /* CustomRequestAdapter.swift in Sources */,
 				299B9DFF22E9A2C20078F2E8 /* URLs.swift in Sources */,
 				299B9DFC22E9A2C20078F2E8 /* APIService.swift in Sources */,
+				299B9E1622E9BBED0078F2E8 /* NearMeViewController.swift in Sources */,
 				299B9DFA22E9A2C20078F2E8 /* HTTPStatusCode.swift in Sources */,
 				299B9DF322E9A2C20078F2E8 /* ErrorResponse.swift in Sources */,
 				299B9DF722E9A2C20078F2E8 /* NewsRequest.swift in Sources */,
