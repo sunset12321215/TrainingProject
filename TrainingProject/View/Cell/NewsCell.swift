@@ -7,20 +7,18 @@
 //
 
 import UIKit
+import SDWebImage
 
 final class NewsCell: UITableViewCell, NibReusable {
 
     @IBOutlet private weak var newsImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setContentForCell()
-    }
-    
-    func setContentForCell() {
-        titleLabel.text = "#News#TruyenNghe"
-        descriptionLabel.text = "description"
+
+    func setContentForCell(data: News) {
+        newsImageView.sd_setImage(with: URL(string: data.thumb_img),
+                                  placeholderImage: UIImage(named: "picture_not_available"))
+        titleLabel.text = data.title
+        descriptionLabel.text = data.description
     }
 }

@@ -6,12 +6,16 @@ PODS:
     - Reusable/View (= 4.1.0)
   - Reusable/Storyboard (4.1.0)
   - Reusable/View (4.1.0)
+  - SDWebImage (5.0.6):
+    - SDWebImage/Core (= 5.0.6)
+  - SDWebImage/Core (5.0.6)
   - Then (2.5.0)
 
 DEPENDENCIES:
   - Alamofire
   - ObjectMapper
   - Reusable
+  - SDWebImage
   - Then
 
 SPEC REPOS:
@@ -19,14 +23,16 @@ SPEC REPOS:
     - Alamofire
     - ObjectMapper
     - Reusable
+    - SDWebImage
     - Then
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   ObjectMapper: 078b564ed25c6578b62588e306bf1da3924636d4
   Reusable: 82be188f29d96dc5eff0db7b2393bcc08d2cdd5b
+  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
 
-PODFILE CHECKSUM: 64c1754b708ff3d49d2a1ba3ea4576c6b0ec1dc1
+PODFILE CHECKSUM: de0ae4d5861d04284fe91e15c1677d5207fcc0df
 
 COCOAPODS: 1.7.2

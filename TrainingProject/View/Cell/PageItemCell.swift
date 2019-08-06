@@ -13,6 +13,16 @@ final class PageItemCell: UICollectionViewCell, NibReusable {
     @IBOutlet private weak var tableView: UITableView!
     
     var sectionOfCollection = 0
+    var news: [News] = [News]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    var populars: [Popular] = [Popular]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     private struct Constant {
         static let newsCellHeight = 380 * Screen.ratioHeight
         static let popularCellHeight = 240 * Screen.ratioHeight
@@ -29,6 +39,8 @@ final class PageItemCell: UICollectionViewCell, NibReusable {
             $0.delegate = self
             $0.register(cellType: PoupularCell.self)
             $0.register(cellType: NewsCell.self)
+            $0.estimatedRowHeight = 200
+            $0.rowHeight = UITableView.automaticDimension
         }
     }
 }
@@ -36,7 +48,14 @@ final class PageItemCell: UICollectionViewCell, NibReusable {
 extension PageItemCell: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        return 10
+        switch sectionOfCollection {
+        case 0:
+            return news.count
+        case 1:
+            return populars.count
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView,
@@ -44,26 +63,14 @@ extension PageItemCell: UITableViewDataSource, UITableViewDelegate {
         switch sectionOfCollection {
         case 0:
             let cell: NewsCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.setContentForCell()
+            cell.setContentForCell(data: news[indexPath.row])
             return cell
         case 1:
             let cell: PoupularCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.setContentForCell()
+            cell.setContentForCell(data: populars[indexPath.row])
             return cell
         default:
             return UITableViewCell()
-        }
-    }
-    
-    func tableView(_ tableView: UITableView,
-                   heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch sectionOfCollection {
-        case 0:
-            return Constant.newsCellHeight
-        case 1:
-            return Constant.popularCellHeight
-        default:
-            return 0
         }
     }
 }

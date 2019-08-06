@@ -9,19 +9,17 @@
 import UIKit
 
 final class PoupularCell: UITableViewCell, NibReusable {
-
+    
     @IBOutlet private weak var popularImageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    func setContentForCell() {
-        titleLabel.text = "D1 -  Thứ 7 Truyền Nghề"
-        descriptionLabel.text = "Phát triển ứng dụng android theo mô hình MVP sử dụng Dagger và RxAnroid"
-        dateLabel.text = "26/7/2019 - 40 Người tham gia"
+    func setContentForCell(data: Popular) {
+        popularImageView.sd_setImage(with: URL(string: data.photo),
+                                     placeholderImage: UIImage(named: "picture_not_available"))
+        titleLabel.text = data.name
+        descriptionLabel.text = data.descriptionRaw
+        dateLabel.text = data.scheduleStartDate.toString() + " Số người tham gia:" + String(data.goingCount)
     }
 }

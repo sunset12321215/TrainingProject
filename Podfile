@@ -11,5 +11,6 @@ pod 'Then'
 pod 'Reusable'
 pod 'Alamofire'
 pod 'ObjectMapper'
+pod 'SDWebImage'
 
 end
